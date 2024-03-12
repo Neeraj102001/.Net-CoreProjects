@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial name="~/Views/LayoutPartial/_HeadPartial.cshtml" />
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <!--Nav Bar-->
+    <partial name="~/Views/LayoutPartial/_HeaderPartial.cshtml" model="@ViewBag.CntrllrActn" />
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--Footer-->
+
+    <partial name="~/Views/LayoutPartial/_FooterPartial.cshtml" />
+
+    <partial name="~/Views/LayoutPartial/_ScriptPartial.cshtml" />
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

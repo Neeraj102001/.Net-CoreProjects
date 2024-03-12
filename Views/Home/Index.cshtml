@@ -1,0 +1,19 @@
+﻿@model List<Customer>
+@{
+    ViewData["Title"] = "Home Page";
+    string[] CntrllrActn = { "Customers", "Index" };
+    ViewBag.CntrllrActn = CntrllrActn;
+}
+@section Styles
+    {
+    <link rel="stylesheet" href="~/css/card.css" asp-append-version="true" />
+}
+
+<partial name="~/Views/Customers/Partials/_TablePartialView.cshtml" />
+
+<partial name="~/Views/Customers/Partials/_CardPartialView.cshtml" />
+
+
+
+
+
